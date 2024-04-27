@@ -3,6 +3,7 @@
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "files.autoSave": "off",
+  "files.autoSaveDelay": 200000,
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.fixAll.eslint": true,
