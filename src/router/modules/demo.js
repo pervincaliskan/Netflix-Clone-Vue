@@ -10,6 +10,11 @@ export default [
     component: () => import('@/views/SignIn.vue'),
   },
   {
+    path: '/landing',
+    name: 'landing',
+    component: () => import('@/views/Landing.vue'),
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('@/views/AboutView.vue'),
