@@ -90,6 +90,8 @@ module.exports = defineConfig({
     'arrow-spacing': 'error',
     // 只强制对象解构，不强制数组解构
     'prefer-destructuring': ['error', { object: true, array: false }],
+
+    'vue/no-multiple-template-root': 0,
   },
   overrides: [
     {

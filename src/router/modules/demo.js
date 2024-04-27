@@ -5,6 +5,11 @@ export default [
     component: () => import('@/views/HomeView.vue'),
   },
   {
+    path: '/sign-in',
+    name: 'sign-in',
+    component: () => import('@/views/SignIn.vue'),
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('@/views/AboutView.vue'),
