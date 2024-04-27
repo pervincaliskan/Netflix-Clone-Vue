@@ -1,25 +1,12 @@
 import axios from 'axios';
 import { tmdbAccessToken } from './env';
 
-// 创建请求实例
 const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
-  // 指定请求超时的毫秒数
-  timeout: 1000,
-  // 表示跨域请求时是否需要使用凭证
-  withCredentials: false,
 });
 
-// 前置拦截器（发起请求之前的拦截）
 instance.interceptors.request.use(
   (config) => {
-    /**
-     * 在这里一般会携带前台的参数发送给后台，比如下面这段代码：
-     * const token = getToken()
-     * if (token) {
-     *  config.headers.token = token
-     * }
-     */
     config.headers.Authorization = `Bearer ${tmdbAccessToken()}`;
     return config;
   },

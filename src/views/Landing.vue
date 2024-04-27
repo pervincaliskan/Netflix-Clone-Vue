@@ -3,7 +3,9 @@ import * as bootstrap from 'bootstrap';
 import Movie from '@/api/movie';
 
 export default {
+  // local state
   data() {
+    // obje donmek zorunda RETURN TYPE OBJECT
     return {
       popular: {
         isLoading: true,
@@ -29,13 +31,12 @@ export default {
       }
     });
 
-    const carousel1 = new bootstrap.Carousel('#carouselExampleIndicators', {
+    new bootstrap.Carousel('#carouselExampleIndicators', {
       ride: 'carousel',
     });
-
-    console.log('carousel1', carousel1);
   },
 
+  // KENDI METODLARIN
   methods: {
     async getPopularMovies() {
       try {
