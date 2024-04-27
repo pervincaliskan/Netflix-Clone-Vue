@@ -13,3 +13,10 @@ export const isDev = () => {
 export const isProd = () => {
   return import.meta.env.PROD;
 };
+
+/**
+ * @returns {String}
+ */
+export const tmdbAccessToken = () => {
+  return import.meta.env.VITE_TMDB_ACCESS_TOKEN;
+};

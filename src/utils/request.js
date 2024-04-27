@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { tmdbAccessToken } from './env';
 
 // 创建请求实例
 const instance = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://api.themoviedb.org/3',
   // 指定请求超时的毫秒数
   timeout: 1000,
   // 表示跨域请求时是否需要使用凭证
@@ -19,6 +20,7 @@ instance.interceptors.request.use(
      *  config.headers.token = token
      * }
      */
+    config.headers.Authorization = `Bearer ${tmdbAccessToken()}`;
     return config;
   },
   (error) => {
@@ -64,14 +66,10 @@ export const post = (url, data = {}, params = {}) => {
 
 /**
  * @param {string} url
- * @param {object} params
+ * @param {import('axios').AxiosRequestConfig} config
  */
-export const get = (url, params = {}) => {
-  return instance({
-    method: 'get',
-    url,
-    params,
-  });
+export const get = (url, config = {}) => {
+  return instance.get(url, config);
 };
 
 /**

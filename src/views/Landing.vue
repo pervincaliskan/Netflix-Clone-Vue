@@ -1,5 +1,36 @@
 <script>
-export default {};
+import Movie from '@/api/movie';
+
+export default {
+  data() {
+    return {
+      popular: {
+        isLoading: true,
+        data: [],
+        error: null,
+      },
+    };
+  },
+
+  created() {
+    this.getPopularMovies();
+  },
+
+  methods: {
+    async getPopularMovies() {
+      try {
+        const { data } = await Movie.popular();
+        this.popular.data = data;
+        this.popular.error = null;
+      } catch (e) {
+        this.popular.data = [];
+        this.popular.error = e;
+      } finally {
+        this.popular.isLoading = false;
+      }
+    },
+  },
+};
 </script>
 
 <template>
@@ -15,11 +46,11 @@ export default {};
             </a>
             <div class="netflix-nav">
               <section>
-                <button>Home</button>
-                <button>TV Shows</button>
-                <button>Movies</button>
-                <button>News & Popular</button>
-                <button>My List</button>
+                <button class="px-3 py-1">Home</button>
+                <button class="px-3 py-1">TV Shows</button>
+                <button class="px-3 py-1">Movies</button>
+                <button class="px-3 py-1">News & Popular</button>
+                <button class="px-3 py-1">My List</button>
               </section>
             </div>
             <!--Browse-->
