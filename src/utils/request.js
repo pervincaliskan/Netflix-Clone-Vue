@@ -4,10 +4,11 @@ import { tmdbAccessToken } from './env';
 const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
 });
-
+// instance istek geldiğinde () içini uygulayacak.
 instance.interceptors.request.use(
   (config) => {
     config.headers.Authorization = `Bearer ${tmdbAccessToken()}`;
+    // istek atarken isteğin confing de header da autherization ekleyip devam ettik, bu kod tekrarını engelledi
     return config;
   },
   (error) => {
@@ -56,7 +57,7 @@ export const post = (url, data = {}, params = {}) => {
  * @param {import('axios').AxiosRequestConfig} config
  */
 export const get = (url, config = {}) => {
-  return instance.get(url, config);
+  return instance.get(url, config); // instance get isteği atarken url ve config gönderdik
 };
 
 /**

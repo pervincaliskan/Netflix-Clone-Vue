@@ -160,7 +160,8 @@ i {
 .slider {
   position: absolute;
   top: 600px;
-  z-index: 500;
+
+  /* z-index: 500; */
 
   /* margin-left: 80px; */
 }
@@ -168,13 +169,15 @@ i {
 .slider2 {
   position: absolute;
   top: 800px;
-  z-index: 500;
+
+  /* z-index: 500; */
 }
 
 .slider3 {
   position: absolute;
   top: 1000px;
-  z-index: 500;
+
+  /* z-index: 500; */
 }
 
 .card {
@@ -189,13 +192,14 @@ i {
 /* fare imleci getirildiğinde öğenin genişliğini 1.4 katına çıkarırken, scaleY(1.4) özelliği öğenin yüksekliğini 1.4 katına çıkarır.
 Böylece, öğe hem yatay hem de dikey yönde büyütülür. */
 .card:hover {
-  z-index: 10;
+  z-index: 9;
   transform: scaleX(1.4) scaleY(1.4); /* Kartın boyutunu değiştirir. */
 }
 
 .card-body {
   position: absolute;
-  top: 120px;
+  top: 100%;
+  z-index: 10;
   display: none;
   width: 100%;
 

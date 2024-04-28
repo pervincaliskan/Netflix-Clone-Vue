@@ -1,5 +1,5 @@
 <script>
-import { setUserToLocalStorage } from '@/utils/localStorage';
+import { setUserToLocalStorage, getUserFromLocalStorage } from '@/utils/localStorage';
 
 export default {
   data() {
@@ -16,6 +16,7 @@ export default {
       };
 
       setUserToLocalStorage(user);
+      console.log('getUserFromLocalStorage', getUserFromLocalStorage());
       this.$router.push('/landing');
     },
   },
@@ -24,9 +25,9 @@ export default {
 
 <template>
   <div>
-    <div class="login-top">
+    <RouterLink to="/" class="login-top">
       <img src="../assets/img/main/logo.png" alt="" />
-    </div>
+    </RouterLink>
 
     <div class="d-flex justify-content-center align-items-center" style="width: 100vw">
       <!--Login-Box-->
