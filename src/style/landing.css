@@ -158,25 +158,16 @@ i {
 }
 
 .slider {
-  position: absolute;
-  top: 600px;
-
   /* z-index: 500; */
 
   /* margin-left: 80px; */
 }
 
 .slider2 {
-  position: absolute;
-  top: 800px;
-
   /* z-index: 500; */
 }
 
 .slider3 {
-  position: absolute;
-  top: 1000px;
-
   /* z-index: 500; */
 }
 
