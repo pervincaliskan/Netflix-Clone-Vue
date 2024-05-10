@@ -248,7 +248,7 @@ export default {
                     <section class="d-flex align-items-center justify-content-between">
                       <!-- {{}} iki süslü işaret interpolation  -->
                       <!-- movie de oy ortalamasını çektik-->
-                      <p class="netflix-card-text m-0" style="color: rgb(0 186 0)">{{ movie.vote_average }}% match</p>
+                      <p class="netflix-card-text m-0" style="color: rgb(0 186 0)">{{ movie.vote_average }} vote</p>
                       <!--  movie de title -->
                       <span class="m-2 netflix-card-text text-white">{{ movie.title }}</span>
                       <span class="border netflix-card-text p-1 text-white">HD</span>
@@ -336,7 +336,7 @@ export default {
                     <section class="d-flex align-items-center justify-content-between">
                       <!-- {{}} iki süslü işaret interpolation  -->
                       <!-- movie de oy ortalamasını çektik-->
-                      <p class="netflix-card-text m-0" style="color: rgb(0 186 0)">{{ movie.vote_average }}% match</p>
+                      <p class="netflix-card-text m-0" style="color: rgb(0 186 0)">{{ movie.vote_average }} vote</p>
                       <!--  movie de title -->
                       <span class="m-2 netflix-card-text text-white">{{ movie.title }}</span>
                       <span class="border netflix-card-text p-1 text-white">HD</span>
@@ -424,7 +424,7 @@ export default {
                     <section class="d-flex align-items-center justify-content-between">
                       <!-- {{}} iki süslü işaret interpolation  -->
                       <!-- movie de oy ortalamasını çektik-->
-                      <p class="netflix-card-text m-0" style="color: rgb(0 186 0)">{{ movie.vote_average }}% match</p>
+                      <p class="netflix-card-text m-0" style="color: rgb(0 186 0)">{{ movie.vote_average }} vote</p>
                       <!--  movie de title -->
                       <span class="m-2 netflix-card-text text-white">{{ movie.title }}</span>
                       <span class="border netflix-card-text p-1 text-white">HD</span>

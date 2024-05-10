@@ -158,16 +158,31 @@ i {
 }
 
 .slider {
+<<<<<<< Updated upstream
+=======
+  top: 600px;
+
+>>>>>>> Stashed changes
   /* z-index: 500; */
 
   /* margin-left: 80px; */
 }
 
 .slider2 {
+<<<<<<< Updated upstream
+=======
+  top: 800px;
+
+>>>>>>> Stashed changes
   /* z-index: 500; */
 }
 
 .slider3 {
+<<<<<<< Updated upstream
+=======
+  top: 1000px;
+
+>>>>>>> Stashed changes
   /* z-index: 500; */
 }
 
