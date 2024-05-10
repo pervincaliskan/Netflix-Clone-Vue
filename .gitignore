@@ -31,5 +31,6 @@ yarn.lock
 components.d.ts
 auto-imports.d.ts
 
-
+# .env dosyasını izleme
+.env
 TODO.md
